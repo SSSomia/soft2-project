@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>data page </title>
+    </head>
+    <body>
+        <table border="1",>
+            <thead>
+                <tr >
+                <td>number  </td>
+                <td>Name  </td>
+                <td>address  </td>
+                <td>Date   </td>
+                <td>cake flavour </td>
+                <td>Email  </td>
+                <td>Phone  </td>
+                <td>Time  </td>
+                <td>kg </td>
+            </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+        <button onclick="addrow()"> Add Row </button>
+        <script>
+            let number=1;
+            function addrow(){
+                const tbody=document.getElementById('table-body');
+                const newrow=document.createElement('tr');
+                newrow.innerHTML= `
+                <td> ${number++}</td>
+                <td><input type="text" name="name[]"></td>
+                <td><input type="text" name="address[]"></td>
+                <td><input type="text" name="Date[]"></td>
+                <td><input type="text" name="Cake flavour[]"></td>
+                <td><input type="text" name="Email[]"></td>
+                <td><input type="text" name="Phone[]"></td>
+                <td><input type="text" name="Time[]"></td>
+                <td><input type="text" name="Kg[]"></td>
+    
+                
+                
+                `;
+                tbody.appendChild(newrow)
+            }
+        </script>
+    </body>
+</html>
