@@ -1,0 +1,94 @@
+
+
+ 
+.ftco-section {
+    padding: 7em 0;
+    position: relative;
+  }
+  
+  .mb-4  {
+    font-size: 50px;
+    font-weight: 500;
+  }
+   .subheading {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    font-weight: normal;
+    font-size: 100px;
+    display: block;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.2);
+    color: #c8a97e;
+    line-height: 1;
+    margin-top: 0;
+    z-index: 2;
+    font-family: "Great Vibes", cursive;
+  }
+ 
+ 
+  .makereservation {
+    width: 100%;
+    background: #ffffff;
+  }
+  
+  .makereservation .form-group label {
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  .makereservation .form-group .icon {
+    position: absolute;
+    top: 50% !important;
+    right: 20px;
+    font-size: 14px;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .makereservation .form-group .select-wrap {
+    position: relative;
+  }
+  
+  .makereservation .form-group .select-wrap select {
+    appearance: none;
+  }
+  
+  .btn {
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn:hover,
+  .btn:active,
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn.btn-primary {
+    background: #c8a97e;
+    border: 1px solid #c8a97e;
+    color: #ffffff;
+  }
+  
+  .btn.btn-primary:hover {
+    background: transparent;
+    border: 1px solid #c8a97e;
+    color: #000000;
+  }
+  
+  .btn.btn-primary.btn-outline-primary {
+    border: 1px solid #c8a97e;
+    background: transparent;
+    color: #c8a97e;
+  }
+  
+  .btn.btn-primary.btn-outline-primary:hover {
+    border: 1px solid transparent;
+    background: #c8a97e;
+    color: #ffffff;
+  }
+  
+  
