@@ -4,113 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Cake</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css\bootstrap-datepicker.css" >
+  
     <link rel="stylesheet" href="orderStyle.css">
-    <title>Document</title>
+
 </head>
 
 <body>
- 
 
-
- <section class="ftco-section img" id="order" style="background-image: url(images/order_bg.jpg);"
- data-stellar-background-ratio="0.5">
- <div class="container">
-     <div class="row d-flex">
-         <div class="col-md-7 ftco-animate makereservation p-4 px-md-5 pb-md-5">
-             <div class="heading-section ftco-animate mb-5 text-center">
-                 <span class="subheading">Order</span>
-                 <h2 class="mb-4">Your Cake</h2>
-             </div>
-             <form action="#">
-                 <div class="row">
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Name</label>
-                             <input type="text" class="form-control" placeholder="Amera Ahmed">
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Email</label>
-                             <input type="email" class="form-control" placeholder="ameraa@gmail.com">
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Address</label>
-                             <input type="text" class="form-control" placeholder="shabin">
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Phone</label>
-                             <input type="text" class="form-control" placeholder="01095750038">
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Date</label>
-                             <input type="text" class="form-control" id="book_date" placeholder="Data">
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Time</label>
-                             <input type="text" class="form-control" id="book_time" placeholder="Time">
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Cake Flavour</label>
-                             <div class="select-wrap one-third">
-                                 <div class="icon"><span class="ios-ios-arrow-down"></span></div>
-                                 <select name="" id="" class="form-control">
-                                     <option value="">Black Forest</option>
-                                     <option value="">Yellow Butter Cake</option>
-                                     <option value="">Pound Cake</option>
-                                     <option value="">Red Velvet Cake</option>
-                                     <option value="">Carrot Cake</option>
-                                     <option value="">Sponge Cake</option>
-                                     <option value="">Genoise Cake</option>
-                                     <option value="">Chiffon Cake</option>
-                                 </select>
-                             </div>
-
-                         </div>
-                     </div>
-                     <div class="col-md-6">
-                         <div class="form-group">
-                             <label for="">Kg</label>
-                             <div class="select-wrap one-third">
-                                 <div class="icon"><span class="ios-ios-arrow-down"></span></div>
-                                 <select name="" id="" class="form-control">
-                                     <option value="">0.5</option>
-                                     <option value="">1</option>
-                                     <option value="">1.5</option>
-                                     <option value="">2.5</option>
-                                     <option value="">5</option>
-                                     <option value="">10</option>
-                                     <option value="">Custom</option>
-                                 </select>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="col-md-12 mt-3">
-                         <div class="form-group text-center">
-                             <input type="submit" value="Order Your Cake" class="btn btn-primary py-3 px-5">
-                         </div>
-                     </div>
-                 </div>
-             </form>
-         </div>
-     </div>
- </div>
+<section class="ftco-section img" id="order" style="background-image: url(images/order_bg.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-7 ftco-animate makereservation p-4 px-md-5 pb-md-5">
+                <div class="heading-section ftco-animate mb-5 text-center">
+                    <span class="subheading">Order</span>
+                    <h2 class="mb-4">Your Cake</h2>
+                </div>
+                <form id="cakeOrderForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input id="name" name="name" type="text" class="form-control" placeholder="your name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" class="form-control" placeholder="xxx@gmail.com">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input id="address" name="address" type="text" class="form-control" placeholder="your address">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input id="phone" name="phone" type="text" class="form-control" placeholder="your phone number">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="book_date">Date</label>
+                                <input id="book_date" name="date" type="text" class="form-control datepicker" placeholder="Date">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="book_time">Time</label>
+                                <input id="book_time" name="time" type="text" class="form-control timepicker" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cake_flavour">Cake Flavour</label>
+                                <select id="cake_flavour" name="cake_flavour" class="form-control">
+                                    <option value="Black Forest">Black Forest</option>
+                                    <option value="Yellow Butter Cake">Yellow Butter Cake</option>
+                                    <option value="Pound Cake">Pound Cake</option>
+                                    <option value="Red Velvet Cake">Red Velvet Cake</option>
+                                    <option value="Carrot Cake">Carrot Cake</option>
+                                    <option value="Sponge Cake">Sponge Cake</option>
+                                    <option value="Genoise Cake">Genoise Cake</option>
+                                    <option value="Chiffon Cake">Chiffon Cake</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="kg">Kg</label>
+                                <select id="kg" name="kg" class="form-control">
+                                    <option value="0.5">0.5</option>
+                                    <option value="1">1</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2.5">2.5</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="Custom">Custom</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <div class="form-group text-center">
+                                <input type="submit" value="Order Your Cake" class="btn btn-primary py-3 px-5">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script src="js/jquery.min.js"></script>
