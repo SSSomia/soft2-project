@@ -1,48 +1,99 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>data page </title>
-    </head>
-    <body>
-        <table border="1",>
-            <thead>
-                <tr >
-                <td>number  </td>
-                <td>Name  </td>
-                <td>address  </td>
-                <td>Date   </td>
-                <td>cake flavour </td>
-                <td>Email  </td>
-                <td>Phone  </td>
-                <td>Time  </td>
-                <td>kg </td>
-            </tr>
-            </thead>
-            <tbody id="table-body">
+<head>
+    <title>Data Page</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3dc7dc;
+            margin: 0;
+            padding: 20px;
+        }
 
-            </tbody>
-        </table>
-        <button onclick="addrow()"> Add Row </button>
-        <script>
-            let number=1;
-            function addrow(){
-                const tbody=document.getElementById('table-body');
-                const newrow=document.createElement('tr');
-                newrow.innerHTML= `
-                <td> ${number++}</td>
-                <td><input type="text" name="name[]"></td>
-                <td><input type="text" name="address[]"></td>
-                <td><input type="text" name="Date[]"></td>
-                <td><input type="text" name="Cake flavour[]"></td>
-                <td><input type="text" name="Email[]"></td>
-                <td><input type="text" name="Phone[]"></td>
-                <td><input type="text" name="Time[]"></td>
-                <td><input type="text" name="Kg[]"></td>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: dodgerblue;
+            outline: none;
+        }
+        </style>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Number</td>
+                <td>Name</td>
+                <td>Address</td>
+                <td>Date</td>
+                <td>Cake Flavour</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Time</td>
+                <td>Kg</td>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Table body will be populated dynamically -->
+        </tbody>
+    </table>
     
-                
-                
-                `;
-                tbody.appendChild(newrow)
-            }
-        </script>
-    </body>
+
+    <script>
+    var orderCakeData = JSON.parse(localStorage.getItem("order_cake")) || [];
+
+   
+    orderCakeData.forEach(function(cakeData, index) {
+        var tableRow = document.createElement('tr');
+        tableRow.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${cakeData.name}</td>
+            <td>${cakeData.address}</td>
+            <td>${cakeData.date}</td>
+            <td>${cakeData.cakeFlavour}</td>
+            <td>${cakeData.email}</td>
+            <td>${cakeData.phone}</td>
+            <td>${cakeData.time}</td>
+            <td>${cakeData.kg}</td>
+        `;
+        document.getElementById('table-body').appendChild(tableRow);
+    });
+
+
+       ment.getElementsByName("kg[]")[0].value = userData.kg;
+      
+    </script>
+</body>
 </html>
