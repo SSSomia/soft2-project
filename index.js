@@ -33,4 +33,6 @@ var swiper = new Swiper(".product-row", {
         slidesPerView: 3,
       },
     },
+    
   });
+ 
