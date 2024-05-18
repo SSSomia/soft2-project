@@ -151,6 +151,7 @@ html::-webkit-scrollbar-thumb {
 
 }
 
+
 .blogs .blogs-row .box .content p {
     font-size: 1.6rem;
     color: var(--black);
@@ -167,6 +168,10 @@ html::-webkit-scrollbar-thumb {
 .blogs .blogs-row .box .content a:hover {
     color: var(--black);
     text-shadow: var(--box-shadow);
+}
+.more-content {
+    display: none;
+  
 }
 
 .newsletter {

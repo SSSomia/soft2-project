@@ -37,3 +37,21 @@ var swiper = new Swiper(".blogs-row", {
         },
     },
 });
+ let learnMoreButtons = document.querySelectorAll('.learn-more');
+
+learnMoreButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        let moreContent = this.parentElement.querySelector('.more-content');
+        
+        if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+            moreContent.style.display = 'block';
+            this.textContent = 'show less'; 
+        } else {
+            moreContent.style.display = 'none';
+            this.textContent = 'learn more'; 
+        }
+    });
+});
+
