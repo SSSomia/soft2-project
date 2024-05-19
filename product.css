@@ -147,6 +147,7 @@ html::-webkit-scrollbar-thumb {
     font-size: 1.8rem;
     line-height: 2;
     margin-bottom: 2rem;
+    color: var(--white);
 }
 
 .home .homeContent .home-btn {
